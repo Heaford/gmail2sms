@@ -131,7 +131,7 @@ def markEmailsasUnread(service):
 def sendSMSAlert():
     client = messagebird.Client(MESSAGEBIRD_ACCESS_KEY)
     try:
-        msg = client.message_create('FromMe', '+447789908834', 'Hello Chief, You have an unread email', { 'reference' : 'Foobar' })
+        msg = client.message_create('FromMe', '+yourphonenumber', 'Hello Chief, You have an unread email', { 'reference' : 'Foobar' })
         print("SMS Sent")
     except messagebird.client.ErrorException as e:
         print('\nAn error occured while requesting a Message object:\n')
